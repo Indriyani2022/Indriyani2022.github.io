@@ -1,1 +1,48 @@
+/* Gaya normal (light mode) */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    transition: background-color 0.3s, color 0.3s;
+}
 
+/* Tombol dark mode */
+#dark-mode-toggle {
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+#dark-mode-toggle:hover {
+    background-color: #45a049;
+}
+
+/* Gaya dark mode */
+body.dark-mode {
+    background-color: #222222;
+    color: #f0f0f0;
+}
+
+/* Gaya elemen lain dalam dark mode */
+body.dark-mode h1 {
+    color: #ffffff;
+}
+
+body.dark-mode p {
+    color: #dddddd;
+}
+
+body.dark-mode #dark-mode-toggle {
+    background-color: #555555;
+}
+
+/* Sesuaikan elemen lain sesuai kebutuhan */
+body.dark-mode .content {
+    background-color: #333333;
+}
