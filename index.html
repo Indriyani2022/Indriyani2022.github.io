@@ -105,6 +105,36 @@
             background: linear-gradient(135deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 50%);
             pointer-events: none;
         }
+        
+        /* Tambahan untuk memastikan layout yang benar */
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+        
+        .navbar {
+            width: 100%;
+            text-align: center;
+        }
+        
+        .navbar ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+        }
+        
+        .navbar ul li {
+            margin: 0 15px;
+        }
     </style>
 </head>
 <body>
@@ -127,6 +157,7 @@
                 <div class="book-spine"></div>
                 <div class="book-back"></div>
             </div>
+        </div>
         Indriyani <span>Library</span>  
     </div>
     <nav class="navbar">
