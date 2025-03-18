@@ -1,10 +1,9 @@
-// Definisi fungsi
 function gotolib() {
     const userConfirmation = confirm("Apakah Anda yakin ingin membuka halaman perpustakaan?");
     if(userConfirmation) {
-        window.open('https://library.usu.ac.id/', '_blank');
+        const newWindow = window.open('https://library.usu.ac.id/', '_blank');
+        if (!newWindow || newWindow.closed || typeof newWindow.closed == 'undefined') {
+            alert("Popup diblokir oleh browser. Silakan izinkan popup untuk website ini.");
+        }
     }
 }
-
-// Hubungkan fungsi ke sebuah tombol atau link
-document.getElementById('library-button').addEventListener('click', gotolib);
