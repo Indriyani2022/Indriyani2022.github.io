@@ -1,11 +1,13 @@
 /* Basic styles */
 :root {
-    --primary-color: #6c5ce7;
-    --secondary-color: #a29bfe;
-    --text-color: #2d3436;
-    --bg-color: #f5f6fa;
-    --header-bg: #fff;
-    --footer-bg: #f1f2f6;
+     --primary-color: #2f74ef;
+            --secondary-color: #7ca3f5;
+            --text-color: #2d3436;
+            --bg-color: #f5f6fa;
+            --header-bg: #fff;
+            --footer-bg: #f1f2f6;
+            --link-hover: #1a56c7;
+            --button-hover: #1a56c7;
 }
 
 body {
