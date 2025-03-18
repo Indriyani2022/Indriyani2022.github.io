@@ -129,7 +129,7 @@ p {
 .copyright {
     text-align: center;
     padding: 1.5rem;
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     margin-top: 3rem;
 }
 
