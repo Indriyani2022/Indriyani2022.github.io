@@ -5,65 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage | Indriyani</title>
     <link rel="stylesheet" href="mode style.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            text-align: center;
-            line-height: 1.6;
-            color: #333;
-        }
-        h1 {
-            color: RoyalBlue;
-            margin-bottom: 30px;
-        }
-        .image-container {
-            margin: 20px 0;
-        }
-        .image-container img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .caption {
-            font-size: 0.8em;
-            color: #666;
-            margin-top: 10px;
-        }
-        p {
-            margin-bottom: 20px;
-        }
-        a {
-            color: RoyalBlue;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .new-tab {
-            background-color: #f4f4f4;
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 30px;
-        }
-        .new-tab h3 {
-            margin-top: 0;
-            color: RoyalBlue;
-        }
-        .new-tab ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        .new-tab ul li {
-            margin: 10px 0;
-        }
-    </style>
+    <link rel="stylesheet" href="style index.css">
 </head>
 <body>
+ <!-- Header Section -->
+  <header>
+    <div class="logo">
+        Indriyani <span>Library</span>
+    </div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Homepage</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+        </ul>
+    </nav>
+  </header>   
  <!-- Tombol Dark Mode -->
     <button id="dark-mode-toggle">Switch to Dark Mode</button>
     <!-- Konten website Anda -->
@@ -77,21 +34,14 @@
     <script src="switch mode.js"></script>
         <p>Indriyani Library adalah sebuah platform perpustakaan digital yang dikembangkan untuk memenuhi tugas mata kuliah Pengembangan Web Perpustakaan. 
         Website ini memuat berbagai tugas, materi, dan referensi yang telah disusun oleh Indriyani selama mengikuti perkuliahan.</p>
-        
-        <p>
-            <a href="https://lib.ub.ac.id/">Kerja sama dengan Perpustakaan Universitas Brawijaya</a>
-        </p>
-    <script src="animasi.js"></script>
-    <div class="new-tab">
-        <h3>New Tab</h3>
-        <ul>
-            <li>
-                <a href="about.html">About Me</a>
-            </li>
-            <li>
-                <a href="contact-us.html">Contact Us</a>
-            </li>
-        </ul>
+       <div class="content">
+            <p>Silakan klik tombol di bawah untuk mengakses situs web perpustakaan USU:</p>
+            <button class="button" onclick="bukaHalamanPerpustakaan()">Kunjungi Perpustakaan USU</button>
+        </div>
+    <div class="copyright">
+        <p>&copy; 2025 Indriyani Library. Hak Cipta Dilindungi.</p>
     </div>
+</footer>
+    <script src="opening web.js"></script> 
 </body>
 </html>
