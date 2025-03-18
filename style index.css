@@ -30,6 +30,7 @@ header {
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
+    text-align: left;
     color: var(--primary-color);
 }
 
