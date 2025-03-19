@@ -148,9 +148,10 @@ p {
 }
  /* Styling untuk footer */
         footer {
-            background-color: #f8f9fa; /* Warna yang sama dengan header */
+            background-color:  #f1f2f6; /* Warna yang sama dengan header */
             color: #333;
             text-align: center;
+            justify-content: space-between;
             padding: 20px 0;
             margin-top: 30px;
             box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
