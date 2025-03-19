@@ -195,7 +195,31 @@
         Website ini memuat berbagai tugas, materi, dan referensi yang telah disusun oleh Indriyani selama mengikuti perkuliahan.</p>
        <div class="content">
             <p>Silakan klik tombol di bawah untuk mengakses situs web perpustakaan USU:</p>
-       <button class="blue-button" onclick="if(confirm('Apakah Anda yakin ingin membuka halaman perpustakaan?')) window.open('https://library.usu.ac.id/', '_blank');">Kunjungi Perpustakaan USU</button>    
+       <button class="blue-button" onclick="if(confirm('Apakah Anda yakin ingin membuka halaman perpustakaan?')) window.open('https://library.usu.ac.id/', '_blank');">Kunjungi Perpustakaan USU</button> 
+      
+           <!-- Konten website -->
+    <div class="content">
+        <h4>Koleksi Buku Indriyani Library</h4>  
+         
+        <!-- Library Container -->
+        <div class="library-container">
+           
+            <!-- Bagian Pencarian -->
+            <div class="search-container">
+                <h5>Temukan Buku</h5>
+                <div class="search-box">
+                    <input type="text" id="search-input" class="search-input" placeholder="Cari judul, penulis, atau kata kunci...">
+                    <button class="search-button" id="search-button">
+                        Cari
+                    </button>
+                </div>
+                <!-- Filter Kategori -->
+                <div class="category-filter">
+                    <button class="category-button active" data-category="all">Semua</button>
+                    <button class="category-button" data-category="novel">Novel</button>
+                    <button class="category-button" data-category="education">Pendidikan</button>
+                    <button class="category-button" data-category="research">Riset</button>
+                    <button class="category-button" data-category="philosophy">Filosofi</button>
 <footer>
      <div class="copyright">
         <p>&copy; 2025 Indriyani Library. Hak Cipta Dilindungi.</p>
