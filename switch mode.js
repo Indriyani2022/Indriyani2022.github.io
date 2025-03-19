@@ -141,10 +141,10 @@ const books = [
         pdf: "https://drive.google.com/drive/folders/1k69XiEQ5Uh7j5VzgTAkak0X5VMX7oLcd" // Ganti dengan path ke file PDF yang benar
     },
     {
-        title: "Learning Web Design : A Beginner’s Guide to HTML, CSS, JavaScript, and Web Graphics",
+        title: "filosofi Teras",
         description: "“ Learn to light a candle in the darkest moments of someone’s life. Be the light that helps others see; it is what gives life its deepest significance. ” ― Roy T. Bennett",
-        cover: "https://cdn.pdfdrive.com/assets/thumbs/033/033ce90f832de5a2bc33e1e25a48a037.jpg",
-        pdf: "https://drive.google.com/file/d/14FjiIidHz8bgtevBpgAw14-Csc49LUD9/view?usp=sharing" // Ganti dengan path ke file PDF
+        cover: "https://ebooks.gramedia.com/ebook-covers/45496/image_highres/ID_FITE2018MTH12.jpg",
+        pdf: "https://drive.google.com/drive/folders/1k69XiEQ5Uh7j5VzgTAkak0X5VMX7oLcd" // Ganti dengan path ke file PDF
     },
     {
         title: "Webster's Word Power Better English Grammar. Improve Your Written and Spoken English",
