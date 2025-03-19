@@ -148,15 +148,14 @@ p {
 }
  /* Styling untuk footer */
         footer {
-            background-color:  #f1f2f6; /* Warna yang sama dengan header */
-            color: #333;
-            text-align: center;
-            justify-content: space-between;
-            padding: 20px 0;
-            margin-top: 30px;
-            box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
-            width: 100%;
-        }
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+           text-align: center;
+           padding: 1rem 5%;
+           background-color: var(--header-bg);
+           box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
         
         footer p {
             margin: 0;
