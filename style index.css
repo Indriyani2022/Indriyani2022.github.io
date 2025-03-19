@@ -45,9 +45,15 @@ header {
 .logo span {
     color: var(--secondary-color);
 }
-
-.navbar ul {
+.navbar {
+    width: 100%;
     display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.navbar ul {
+    display: flex;  
+    justify-content: center;
     list-style: none;
     margin: 0;
     padding: 0;
