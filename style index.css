@@ -69,11 +69,18 @@ header {
     font-weight: 500;
     transition: color 0.3s ease;
 }
-
+.navbar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
 .navbar a:hover {
     color: var(--primary-color);
 }
-
+.navbar ul li a:hover {
+    color: #3498db;
+}
 /* Dark mode toggle button */
 #dark-mode-toggle {
     margin: 1rem;
