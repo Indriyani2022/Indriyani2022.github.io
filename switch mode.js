@@ -34,104 +34,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Fungsi untuk menampilkan buku
-function displayBooks(bookArray) {
-    const bookCollection = document.getElementById('book-collection');
-    bookCollection.innerHTML = '';
-    
-    if (bookArray.length === 0) {
-        bookCollection.innerHTML = '<div class="no-results">Tidak ada buku yang ditemukan</div>';
-        return;
-    }
-    
-    bookArray.forEach(book => {
-        const bookItem = document.createElement('div');
-        bookItem.className = 'book-item';
-        bookItem.innerHTML = `
-            <div class="book-cover">
-                <img src="${book.cover}" alt="${book.title}">
-            </div>
-            <div class="book-info">
-                <h3 class="book-title">${book.title}</h3>
-                <p class="book-author">${book.author}</p>
-                <span class="book-category">${book.category}</span>
-                <div class="book-details">
-                    <div class="book-rating">★ ${book.rating}</div>
-                    <div class="book-status ${book.status}">${book.status === 'available' ? 'Tersedia' : 'Dipinjam'}</div>
-                </div>
-            </div>
-        `;
-        // Tambahkan event listener untuk detail buku
-        bookItem.addEventListener('click', function() {
-            alert(`Buku: ${book.title}\nPenulis: ${book.author}\nStatus: ${book.status === 'available' ? 'Tersedia' : 'Dipinjam'}`);
-            // Dalam aplikasi nyata, ini bisa mengarahkan ke halaman detail buku
-        });
-        bookCollection.appendChild(bookItem);
-    });
-}
-
-// Fungsi pencarian
-function searchBooks() {
-    const searchTerm = document.getElementById('search-input').value.toLowerCase();
-    const activeCategory = document.querySelector('.category-button.active').dataset.category;
-    
-    let filteredBooks = books;
-    
-    // Filter berdasarkan kategori jika bukan "all"
-    if (activeCategory !== 'all') {
-        filteredBooks = filteredBooks.filter(book => book.category === activeCategory);
-    }
-    
-    // Filter berdasarkan pencarian
-    if (searchTerm) {
-        filteredBooks = filteredBooks.filter(book => 
-            book.title.toLowerCase().includes(searchTerm) || 
-            book.author.toLowerCase().includes(searchTerm) ||
-            book.category.toLowerCase().includes(searchTerm)
-        );
-    }
-    
-    displayBooks(filteredBooks);
-}
-
-// Event listeners
-document.addEventListener('DOMContentLoaded', function() {
-    // Tampilkan semua buku saat halaman dimuat
-    displayBooks(books);
-    
-    // Event listener untuk tombol pencarian
-    document.getElementById('search-button').addEventListener('click', searchBooks);
-    document.getElementById('search-input').addEventListener('keyup', function(event) {
-        if (event.key === 'Enter') {
-            searchBooks();
-        }
-    });
-    
-    // Event listener untuk filter kategori
-    const categoryButtons = document.querySelectorAll('.category-button');
-    categoryButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            // Hapus class active dari semua tombol
-            categoryButtons.forEach(btn => btn.classList.remove('active'));
-            // Tambahkan class active pada tombol yang diklik
-            this.classList.add('active');
-            // Terapkan pencarian dengan filter baru
-            searchBooks();
-        });
-    });
-    
-    // Event listener untuk pagination
-    const paginationButtons = document.querySelectorAll('.pagination button');
-    paginationButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            paginationButtons.forEach(btn => btn.classList.remove('active'));
-            this.classList.add('active');
-            // Dalam aplikasi nyata, ini akan memuat halaman buku yang berbeda
-            displayBooks(books);
-        });
-    });
-});
-
 // Data buku
 const books = [
     {
@@ -146,24 +48,6 @@ const books = [
         cover: "https://ebooks.gramedia.com/ebook-covers/45496/image_highres/ID_FITE2018MTH12.jpg",
         pdf: "https://drive.google.com/drive/folders/1k69XiEQ5Uh7j5VzgTAkak0X5VMX7oLcd" // Ganti dengan path ke file PDF
     },
-    {
-        title: "Webster's Word Power Better English Grammar. Improve Your Written and Spoken English",
-        description: "“ Everything in the universe is within you. Ask all from yourself. ” ― Rumi",
-        cover: "https://cdn.pdfdrive.com/assets/thumbs/4a7/4a7bd709db4352edd66565b212d9c5b4.jpg",
-        pdf: "https://drive.google.com/file/d/1mh6kwRXbtiX4vgqYZRDBwUqdhHrqj6AS/view?usp=sharing" // Ganti dengan path ke file PDF
-    },
-    {
-        title: "100 Ways to Motivate Yourself: Change Your Life Forever",
-        description: "“ You have to expect things of yourself before you can do them. ” ― Michael Jordan",
-        cover: "https://cdn.pdfdrive.com/assets/thumbs/703/703b43783687bc4f3540c276dca3819a.jpg",
-        pdf: "https://drive.google.com/file/d/1-1w0V8j5Dox4eOe6PyWWu5kqAtDUaog3/view?usp=sharing" // Ganti dengan path ke file PDF
-    },
-    {
-        title: "Boundaries: When To Say Yes, How to Say No",
-        description: "“ Don't watch the clock, do what it does. Keep Going. ” ― Sam Levenson",
-        cover: "https://cdn.pdfdrive.com/assets/thumbs/cc2/cc232d97796e0e9ab2e19ea6af584f55.jpg",
-        pdf: "https://drive.google.com/file/d/1_0gk2RdjfbjhoUiovgWoS60YOGhocAZj/view?usp=drive_link" // Ganti dengan path ke file PDF
-    }
 ];
 
 const searchInput = document.getElementById('search');
