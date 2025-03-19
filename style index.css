@@ -23,7 +23,7 @@ body {
 header {
     display: flex;
     justify-content: space-between;
-    align-items: left;
+    align-items: center;
     padding: 1rem 5%;
     background-color: var(--header-bg);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -137,7 +137,7 @@ p {
 .copyright {
     text-align: center;
     padding: 1.5rem;
-    background-color: var(--secondary-color);
+    background-color: var(--footer-bg);
     margin-top: 3rem;
 }
 
