@@ -149,10 +149,11 @@
             justify-content: center;
             margin-bottom: 15px;
         }
-        
-        .navbar {
+         .navbar {
             width: 100%;
             text-align: center;
+            justify-content: center;
+            margin-top: 10px;
         }
         
         .navbar ul {
@@ -160,11 +161,22 @@
             justify-content: center;
             list-style: none;
             padding: 0;
+            margin: 0;
         }
         
         .navbar ul li {
             margin: 0 15px;
-        }   
+        }
+         .navbar ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .navbar ul li a:hover {
+            color: #3498db;
+        }
     </style>
 </head>
 <body>
