@@ -134,6 +134,18 @@
 .blue-button:hover {
   background-color: #0056b3;
 }
+  .event-scroll-container {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+}
+.event-scroll-container::-webkit-scrollbar {
+  height: 8px;
+}
+.event-scroll-container::-webkit-scrollbar-thumb {
+  background-color: #007bff;
+  border-radius: 4px;
+}
+      
     </style>
 </head>
 <body>
@@ -224,15 +236,34 @@
           
                 </div>
             </div>
-          <!-- Event Section -->
+         <!-- Event Section -->
 <section class="event-section my-5 px-3">
-    <h4 class="text-center mb-4">Event Terbaru</h4>
-    <div class="d-flex flex-column align-items-center text-center border rounded p-4 shadow-sm" style="max-width: 600px; margin: auto;">
-        <img src="https://instagram.fcgk39-1.fna.fbcdn.net/v/t51.2885-15/xxx.jpg?_nc_ht=instagram.fcgk39-1.fna.fbcdn.net&_nc_cat=110&_nc_ohc=xyz" alt="Thumbnail Event" class="img-fluid mb-3" style="border-radius: 10px; max-height: 300px; object-fit: cover;">
-        <h5 class="mb-2">Judul Event Spesial</h5>
-        <p class="mb-3">Ikuti event terbaru dari Indriyani Library yang akan hadir dengan berbagai aktivitas menarik dan bermanfaat untuk pengunjung.</p>
-        <a href="https://www.instagram.com/p/DGNqDCvzKTg/" target="_blank" class="blue-button">Selengkapnya</a>
+  <h4 class="text-center mb-4">Event Terbaru</h4>
+  <div class="event-scroll-container d-flex overflow-auto gap-3 px-2">
+    <!-- Event Card 1 -->
+    <div class="event-card border rounded p-3 shadow-sm" style="min-width: 280px; flex-shrink: 0;">
+      <img src="https://via.placeholder.com/280x160" alt="Event 1" class="img-fluid mb-2" style="border-radius: 8px;">
+      <h6>Judul Event 1</h6>
+      <p class="small">Deskripsi singkat event pertama...</p>
+      <a href="https://www.instagram.com/p/DGNqDCvzKTg/" target="_blank" class="blue-button">Selengkapnya</a>
     </div>
+    
+    <!-- Event Card 2 -->
+    <div class="event-card border rounded p-3 shadow-sm" style="min-width: 280px; flex-shrink: 0;">
+      <img src="https://via.placeholder.com/280x160" alt="Event 2" class="img-fluid mb-2" style="border-radius: 8px;">
+      <h6>Judul Event 2</h6>
+      <p class="small">Deskripsi singkat event kedua...</p>
+      <a href="https://www.instagram.com/" target="_blank" class="blue-button">Selengkapnya</a>
+    </div>
+
+    <!-- event Card 3 -->
+      <div class="event-card border rounded p-3 shadow-sm" style="min-width: 280px; flex-shrink: 0;">
+      <img src="https://via.placeholder.com/280x160" alt="Event 2" class="img-fluid mb-2" style="border-radius: 8px;">
+      <h6>Judul Event 2</h6>
+      <p class="small">Deskripsi singkat event kedua...</p>
+      <a href="https://www.instagram.com/" target="_blank" class="blue-button">Selengkapnya</a>
+    </div>
+  </div>
 </section>
 <footer>
         <p>&copy; 2025 Indriyani Library. Hak Cipta Dilindungi.</p>
