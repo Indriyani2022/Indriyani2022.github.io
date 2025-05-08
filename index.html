@@ -150,6 +150,18 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.full-desc {
+            display: none;
+        }
+        .book-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 20px;
+        }
+        .book-item {
+            max-width: 100%;
+        }
  footer {
     text-align: center;
     margin-top: 40px;
@@ -230,18 +242,9 @@
                 <input type="text" id="search-input" class="search-input" placeholder="Cari judul, penulis, atau kata kunci..." oninput="searchBooks()">
             </div>
         </div>
-        
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4" id="book-list">
-                <!-- Filter Kategori -->
-                <div class="category-filter">
-                    <button class="category-button active" data-category="all">Semua</button>
-                    <button class="category-button" data-category="novel">Novel</button>
-                    <button class="category-button" data-category="education">Pendidikan</button>
-                    <button class="category-button" data-category="research">Riset</button>
-                    <button class="category-button" data-category="philosophy">Filosofi</button>
-          
-                </div>
-            </div>
+        <div class="book-container" id="book-list">
+        </div>
+            
 
 <!-- Koleksi Buku Section -->
 <section class="koleksi-buku my-5 px-3">
