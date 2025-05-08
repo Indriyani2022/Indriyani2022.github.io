@@ -1,9 +1,8 @@
-document.addEventListener('DOMContentLoaded', function () {
+ocument.addEventListener('DOMContentLoaded', function () {
     const darkModeToggle = document.getElementById('dark-mode-toggle');
-    const modeIcon = document.getElementById('mode-icon');
 
-    // Memeriksa dan mengubah mode gelap
-    function updateButton() {
+    // Memperbarui teks tombol berdasarkan mode saat ini
+    function updateButtonText() {
         if (document.body.classList.contains('dark-mode')) {
             darkModeToggle.textContent = 'Switch to Light Mode';
         } else {
@@ -11,12 +10,16 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    // Menangani klik pada tombol dark mode
     darkModeToggle.addEventListener('click', function (event) {
-        event.preventDefault();  // Mencegah agar tidak menjadi tautan
-        document.body.classList.toggle('dark-mode');
-        updateButton();
+        // Pastikan ini adalah tombol, bukan tautan
+        event.preventDefault();
 
-        // Simpan preferensi mode dalam localStorage
+        // Menambahkan atau menghapus class dark-mode
+        document.body.classList.toggle('dark-mode');
+        updateButtonText();
+
+        // Menyimpan preferensi dark mode
         if (document.body.classList.contains('dark-mode')) {
             localStorage.setItem('darkMode', 'enabled');
         } else {
@@ -24,11 +27,12 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // Mengecek preferensi dark mode saat memuat halaman
+    // Mengecek preferensi saat halaman dimuat
     if (localStorage.getItem('darkMode') === 'enabled') {
         document.body.classList.add('dark-mode');
     }
-    updateButton();
+
+    updateButtonText(); // Set awal tombol
 });
 // Contoh data buku (dalam aplikasi sebenarnya, ini bisa berasal dari database)
         const books = [
