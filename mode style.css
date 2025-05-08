@@ -17,6 +17,9 @@ body {
     position: fixed;
     top: 20px;
     right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #dark-mode-toggle:hover {
@@ -47,4 +50,17 @@ body.dark-mode .content {
     background-color: #333333;
 }
 
-  
+/* Ikon matahari dan bulan */
+.icon {
+    font-size: 20px;
+    margin-right: 8px;
+}
+
+body.dark-mode #mode-icon {
+    content: "\263e"; /* Ikon bulan untuk mode gelap */
+}
+
+/* Gaya untuk ikon matahari di mode terang */
+body:not(.dark-mode) #mode-icon {
+    content: "\2600"; /* Ikon matahari untuk mode terang */
+}
