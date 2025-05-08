@@ -21,6 +21,19 @@ document.addEventListener('DOMContentLoaded', function () {
         filterBooks();
     });
 
+    document.getElementById('book-image-1').addEventListener('click', function() {
+  var shortDesc = document.querySelector('.short-desc');
+  var fullDesc = document.querySelector('.full-desc');
+  
+  // Toggle visibility of the short and full descriptions
+  if (fullDesc.style.display === 'none') {
+    fullDesc.style.display = 'block';
+    shortDesc.style.display = 'none';
+  } else {
+    fullDesc.style.display = 'none';
+    shortDesc.style.display = 'block';
+  }
+});
     searchInput.addEventListener('input', function () {
         filterBooks();
     });
