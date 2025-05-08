@@ -1,39 +1,38 @@
-// Dark Mode Toggle Functionality
+// Dark Mode Toggle Functionality with Sun and Moon Icons
 document.addEventListener('DOMContentLoaded', function() {
-    // Get the dark mode toggle button
     const darkModeToggle = document.getElementById('dark-mode-toggle');
+    const modeIcon = document.getElementById('mode-icon');
     
-    if (darkModeToggle) {
-        // Function to update the button text based on current mode
-        function updateButtonText() {
-            if (document.body.classList.contains('dark-mode')) {
-                darkModeToggle.textContent = 'Switch to Light Mode';
-            } else {
-                darkModeToggle.textContent = 'Switch to Dark Mode';
-            }
-        }
-        
-        // Toggle dark mode when the button is clicked
-        darkModeToggle.addEventListener('click', function() {
-            document.body.classList.toggle('dark-mode');
-            updateButtonText();
-            
-            // Save preference to localStorage so it persists between page loads
-            if (document.body.classList.contains('dark-mode')) {
-                localStorage.setItem('darkMode', 'enabled');
-            } else {
-                localStorage.setItem('darkMode', 'disabled');
-            }
-        });
-        
-        // Check for saved preference when page loads
-        if (localStorage.getItem('darkMode') === 'enabled') {
-            document.body.classList.add('dark-mode');
-            updateButtonText();
+    // Function to update the button icon and text based on current mode
+    function updateButton() {
+        if (document.body.classList.contains('dark-mode')) {
+            modeIcon.innerHTML = '&#9789;'; // Moon icon for dark mode
+            darkModeToggle.textContent = 'Switch to Light Mode';
+        } else {
+            modeIcon.innerHTML = '&#9790;'; // Sun icon for light mode
+            darkModeToggle.textContent = 'Switch to Dark Mode';
         }
     }
-});
 
+    // Toggle dark mode when the button is clicked
+    darkModeToggle.addEventListener('click', function() {
+        document.body.classList.toggle('dark-mode');
+        updateButton();
+        
+        // Save preference to localStorage so it persists between page loads
+        if (document.body.classList.contains('dark-mode')) {
+            localStorage.setItem('darkMode', 'enabled');
+        } else {
+            localStorage.setItem('darkMode', 'disabled');
+        }
+    });
+
+    // Check for saved preference when page loads
+    if (localStorage.getItem('darkMode') === 'enabled') {
+        document.body.classList.add('dark-mode');
+    }
+    updateButton();
+});
 // Contoh data buku (dalam aplikasi sebenarnya, ini bisa berasal dari database)
         const books = [
             { id: 1, title: "Educated", author: "Tara Westover", keywords: ["novel", "pendidikan", "motivasi"] },
