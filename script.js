@@ -1,7 +1,6 @@
 // Fungsi untuk menampilkan atau menyembunyikan deskripsi lengkap
-function toggleDescription(bookId) {
-    const bookItems = document.querySelectorAll('.book-item');
-    const currentBook = bookItems[bookId - 1];
+function toggleDescription(element) {
+    const currentBook = element.closest('.book-item');
     const fullDesc = currentBook.querySelector('.full-desc');
     const shortDesc = currentBook.querySelector('.short-desc');
 
@@ -31,7 +30,3 @@ function searchBooks() {
         }
     });
 }
-</script>
-
-</body>
-</html>
