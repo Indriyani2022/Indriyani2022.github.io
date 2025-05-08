@@ -14,19 +14,21 @@ function toggleDescription(element) {
     }
 }
 
-// Fungsi pencarian buku
-function searchBooks() {
-    const searchInput = document.getElementById('search-input').value.toLowerCase();
-    const bookItems = document.querySelectorAll('.book-item');
+   function searchBooks() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const books = document.querySelectorAll(".book-card-grid");
 
-    bookItems.forEach(item => {
-        const title = item.getAttribute('data-title').toLowerCase();
-        const description = item.getAttribute('data-description').toLowerCase();
-
-        if (title.includes(searchInput) || description.includes(searchInput)) {
-            item.style.display = "block";
+      books.forEach(book => {
+        const title = book.querySelector("h3").textContent.toLowerCase();
+        if (title.includes(input)) {
+          book.style.display = "block";
         } else {
-            item.style.display = "none";
+          book.style.display = "none";
         }
+      });
+    }
+
+ AOS.init({
+      duration: 800,
+      once: true
     });
-}
