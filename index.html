@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage | Indriyani</title>
+    <meta name="description" content="Indriyani Library adalah platform perpustakaan digital karya Indriyani, berisi koleksi buku, materi kuliah, dan referensi.">
     <!-- Bootstrap CSS (online) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="mode style.css">
@@ -153,7 +154,7 @@
 .full-desc {
             display: none;
         }
-        .book-container {
+        .book-card-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
             gap: 16px;
@@ -185,6 +186,7 @@
     background-color: #0056b3; /* Disamakan dengan warna header tabel */
     color: white; /* Warna teks jadi putih agar kontras */     
     </style>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>    
@@ -218,13 +220,13 @@
             <li><a href="about.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Kembali ke halaman tentang saya">About Me</a></li>
             <li><a href="contact-us.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Kembali ke halaman hubungi saya">Contact Us</a></li>
             <li><a href="tabel_perkalian.php"data-bs-toggle="tooltip" data-bs-placement="bottom" title="Kembali ke halaman numverse">NumVerse</li>
-            <li><a href="formulir_pengunjung.php">Formulir Pengunjung</li>
+            <li><a href="formulir_pengunjung.php">Formulir Pengunjung</a></li>
         </ul>
     </nav>
   </header>   
     <!-- Konten website Anda -->
     <div class="content">
-    <h1><a>Selamat Datang di Indriyani Library!</a></h1>
+    <h1><span>Selamat Datang di Indriyani Library!</span></h1>
             <div class="image-container">
         <img src="https://tse3.mm.bing.net/th?id=OIP.UILSua5QL4AzqOrWjI_S1wHaE8&pid=Api&P=0&h=220" alt="Image Display">
     </div>  
@@ -252,17 +254,15 @@
         <div class="library-container">
            <section>
             <!-- Bagian Pencarian -->
-            <div class="search-container">
-                <h5>Temukan Buku</h5>
-                <div class="search-box">
-                <input type="text" id="search-input" class="search-input" placeholder="Cari judul, penulis, atau kata kunci..." oninput="searchBooks()">
-            </div>
-        </div>
-        <div class="book-container" id="book-list">
-        </div>
+     <main>
+    <div class="container">
+      <!-- Form Pencarian -->
+      <section class="search-section">
+        <input type="text" id="searchInput" placeholder="Cari buku..." onkeyup="searchBooks()">
+      </section>
             
-
 <!-- Koleksi Buku Section -->
+ <div class="book-card-container">
 <section class="col book-item-5 px-3">
   <h4 class="text-center mb-4">Koleksi Buku Terbaru</h4>
   <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
@@ -283,19 +283,14 @@
             </div>
       
     <!-- Buku 2 -->
-    <div class="col">
-      <div class="card h-100 shadow-sm">
-        <img src="https://via.placeholder.com/200x280" class="card-img-top" alt="Buku 2">
-        <div class="card-body">
-          <h5 class="card-title">Judul Buku 2</h5>
-          <p class="card-text">Deskripsi singkat buku kedua.</p>
+    <div class="book-card-grid" data-aos="fade-up" data-aos-delay="100">
+          <img src="https://via.placeholder.com/200x280" alt="Sampul Buku 2">
+          <h3>Judul Buku 2</h3>
+          <p>Deskripsi singkat buku 2.</p>
         </div>
-        <div class="card-footer bg-transparent border-top-0">
-          <a href="#" class="blue-button w-100">Lihat Buku</a>
-        </div>
-      </div>
+     </div>
     </div>
-
+  </main>
     <!-- Buku 3 -->
     <div class="col">
       <div class="card h-100 shadow-sm">
