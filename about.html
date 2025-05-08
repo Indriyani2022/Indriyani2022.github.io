@@ -154,13 +154,23 @@
             background: linear-gradient(135deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 50%);
             pointer-events: none;
         }
-         /* Footer tengah */
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            padding: 10px;
-            background-color: #e9ecef;
-        }
+         .container-kerajinan {
+    width: 50%;
+    margin: 40px auto;
+    background-color: #D6EAF8;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    color: #000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 10px;
+    background-color: #0056b3; /* Disamakan dengan warna header tabel */
+    color: white; /* Warna teks jadi putih agar kontras */
+}
     </style>
 </head>
 <body>
@@ -246,21 +256,21 @@
             <td>Menggambar dan Menyulam </td>
         </tr>
     </table>
-<section style="margin-top: 40px; background-color: #D6EAF8; padding: 30px; border-radius: 20px; text-align: center; color: #000;">
+<div class="container-kerajinan">
     <h2>Usaha Kerajinan Saya</h2>
     <p>
         Saya juga menjalankan usaha kerajinan tangan bernama <strong>I Wish Craft</strong> yang berfokus pada produk unik dan handmade seperti gantungan kunci, pembatas halaman buku, dan gelang yang terbuat dari benang sulam.
     </p>
     <p>Temukan koleksi lengkapnya di Instagram:</p>
     <div style="display: flex; justify-content: center; margin: 30px 0;">
-  <img src="posterusaha.jpeg" alt="Poster I Wish Craft"
-       style="width: 5cm; height: 8cm; max-width: 100%; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
-</div>
+        <img src="posterusaha.jpeg" alt="Poster I Wish Craft"
+             style="width: 5cm; height: 8cm; max-width: 100%; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+    </div>
     <a href="https://www.instagram.com/i_wishcraft?igsh=MTBmM3M2bDRtdTJ0cw==" target="_blank"
        style="display: inline-block; background-color: #0056b3; color: white; padding: 10px 20px; text-decoration: none; border-radius: 30px; font-weight: bold;">
         🌸 Kunjungi Instagram @i_wishcraft
     </a>
-</section>
+</div>
     
 <footer>
         <p>&copy; 2025 Indriyani Library. Hak Cipta Dilindungi.</p>
