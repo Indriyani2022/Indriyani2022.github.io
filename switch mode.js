@@ -1,25 +1,22 @@
-// Dark Mode Toggle Functionality with Sun and Moon Icons
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const darkModeToggle = document.getElementById('dark-mode-toggle');
     const modeIcon = document.getElementById('mode-icon');
-    
-    // Function to update the button icon and text based on current mode
+
+    // Memeriksa dan mengubah mode gelap
     function updateButton() {
         if (document.body.classList.contains('dark-mode')) {
-            modeIcon.innerHTML = '&#9789;'; // Moon icon for dark mode
             darkModeToggle.textContent = 'Switch to Light Mode';
         } else {
-            modeIcon.innerHTML = '&#9790;'; // Sun icon for light mode
             darkModeToggle.textContent = 'Switch to Dark Mode';
         }
     }
 
-    // Toggle dark mode when the button is clicked
-    darkModeToggle.addEventListener('click', function() {
+    darkModeToggle.addEventListener('click', function (event) {
+        event.preventDefault();  // Mencegah agar tidak menjadi tautan
         document.body.classList.toggle('dark-mode');
         updateButton();
-        
-        // Save preference to localStorage so it persists between page loads
+
+        // Simpan preferensi mode dalam localStorage
         if (document.body.classList.contains('dark-mode')) {
             localStorage.setItem('darkMode', 'enabled');
         } else {
@@ -27,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Check for saved preference when page loads
+    // Mengecek preferensi dark mode saat memuat halaman
     if (localStorage.getItem('darkMode') === 'enabled') {
         document.body.classList.add('dark-mode');
     }
