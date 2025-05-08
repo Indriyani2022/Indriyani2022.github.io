@@ -1,45 +1,37 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const searchInput = document.getElementById('search-input');
-    const searchButton = document.getElementById('search-button');
-    const books = document.querySelectorAll('.book');
+// Fungsi untuk menampilkan atau menyembunyikan deskripsi lengkap
+function toggleDescription(bookId) {
+    const bookItems = document.querySelectorAll('.book-item');
+    const currentBook = bookItems[bookId - 1];
+    const fullDesc = currentBook.querySelector('.full-desc');
+    const shortDesc = currentBook.querySelector('.short-desc');
 
-    function filterBooks() {
-        const query = searchInput.value.toLowerCase();
-        books.forEach(function (book) {
-            const title = book.querySelector('.card-title').textContent.toLowerCase();
-            const description = book.querySelector('.card-text').textContent.toLowerCase();
-
-            if (title.includes(query) || description.includes(query)) {
-                book.style.display = '';
-            } else {
-                book.style.display = 'none';
-            }
-        });
+    // Toggle the display of the description
+    if (fullDesc.style.display === "none") {
+        fullDesc.style.display = "block";
+        shortDesc.style.display = "none";
+    } else {
+        fullDesc.style.display = "none";
+        shortDesc.style.display = "block";
     }
+}
 
-    searchButton.addEventListener('click', function () {
-        filterBooks();
-    });
+// Fungsi pencarian buku
+function searchBooks() {
+    const searchInput = document.getElementById('search-input').value.toLowerCase();
+    const bookItems = document.querySelectorAll('.book-item');
 
-    searchInput.addEventListener('input', function () {
-        filterBooks();
-    });
+    bookItems.forEach(item => {
+        const title = item.getAttribute('data-title').toLowerCase();
+        const description = item.getAttribute('data-description').toLowerCase();
 
-    // Toggle full description on book click
-    document.querySelectorAll('.card-img-top').forEach(function (img) {
-        img.addEventListener('click', function () {
-            const book = img.closest('.book');
-            const shortDesc = book.querySelector('.short-desc');
-            const fullDesc = book.querySelector('.full-desc');
-            
-            // Toggle visibility of the short and full descriptions
-            if (fullDesc.style.display === 'none') {
-                fullDesc.style.display = 'block';
-                shortDesc.style.display = 'none';
-            } else {
-                fullDesc.style.display = 'none';
-                shortDesc.style.display = 'block';
-            }
-        });
+        if (title.includes(searchInput) || description.includes(searchInput)) {
+            item.style.display = "block";
+        } else {
+            item.style.display = "none";
+        }
     });
-});
+}
+</script>
+
+</body>
+</html>
